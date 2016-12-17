@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
 
             holder.text1.setText(cursor.getString(cursor.getColumnIndex(DataProvider.COL_NAME)));
-            holder.textEmail.setText(cursor.getString(cursor.getColumnIndex(DataProvider.COL_EMAIL)));
+//            holder.textEmail.setText(cursor.getString(cursor.getColumnIndex(DataProvider.COL_EMAIL)));
 
             int count = 0;
             count = cursor.getInt(cursor.getColumnIndex(DataProvider.COL_COUNT));
