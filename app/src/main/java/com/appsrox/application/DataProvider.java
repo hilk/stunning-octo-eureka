@@ -213,6 +213,10 @@ public class DataProvider extends ContentProvider {
                     + COL_NAME 	  +" text, "
                     + COL_EMAIL   +" text unique, "
                     + COL_COUNT   +" integer default 0);");
+
+
+            String x = "INSERT INTO " + TABLE_PROFILE + " (" + COL_NAME + ", "+ COL_EMAIL + ", "+ COL_COUNT +") Values ('Hayriye','ilkhayriye@gmail.com','5')";
+            db.execSQL(x);
         }
 
         @Override

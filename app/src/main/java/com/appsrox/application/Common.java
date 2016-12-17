@@ -64,6 +64,9 @@ public class Common extends Application {
     public static String getChatId() {
         return prefs.getString("chat_id", "");
     }
+    public static String getCurrentChat() {
+        return prefs.getString("current_chat", null);
+    }
 
     public static String getServerUrl() {
         return prefs.getString("server_url_pref", Constants.SERVER_URL);

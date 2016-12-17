@@ -140,21 +140,30 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             return itemLayout;
         }
 
+
+
+
         @Override
         public void bindView(View view, Context context, Cursor cursor) {
-            ViewHolder holder = (ViewHolder) view.getTag();
+
+           ViewHolder holder = (ViewHolder) view.getTag();
+
+
             holder.text1.setText(cursor.getString(cursor.getColumnIndex(DataProvider.COL_NAME)));
             holder.textEmail.setText(cursor.getString(cursor.getColumnIndex(DataProvider.COL_EMAIL)));
-            int count = cursor.getInt(cursor.getColumnIndex(DataProvider.COL_COUNT));
+
+            int count = 0;
+            count = cursor.getInt(cursor.getColumnIndex(DataProvider.COL_COUNT));
             if (count > 0){
                 holder.text2.setVisibility(View.VISIBLE);
                 holder.text2.setText(String.format("%d new message%s", count, count==1 ? "" : "s"));
             }else
                 holder.text2.setVisibility(View.GONE);
 
-
-
         }
+
+
+
     }
 
     private static class ViewHolder {
